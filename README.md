@@ -8,6 +8,7 @@
 - [React Native 개발 시작하기](https://wit.nts-corp.com/2020/03/23/6014) 
 - [React Native: 웹개발자가 한달만에 앱 출시하기](https://www.slideshare.net/deview/121react-native)
 - [React Native: 디버깅](https://medium.com/duckuism/react-native-%EB%94%94%EB%B2%84%EA%B9%85-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0-7e46bfe89f60)
+- [Yellow](http://www.flatuicolorpicker.com/yellow-rgba-color-model/)
 
 # Install dependencies
 1. Install dependencies modules

@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { TopBarHeight } from 'styles/layout';
+import { pointColor } from 'styles/color';
 
 const styles = StyleSheet.create({
   container: {
@@ -11,6 +12,8 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     marginBottom: 'auto',
+    fontSize: 25,
+    color: pointColor,
   },
 });
 

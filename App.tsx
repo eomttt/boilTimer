@@ -1,7 +1,7 @@
 import React from 'react';
-import {Home} from 'pages/Home';
+import { Home } from 'pages/Home';
 
-declare const global: {HermesInternal: null | {}};
+declare const global: { HermesInternal: null | {} };
 
 const App = () => {
   return (
