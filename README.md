@@ -22,3 +22,6 @@ $ brew install watchman
 # Start
  1. Open Terminal ```$ yarn run start```
  2. Open New Termianl ```$ yarn run ios```
+
+ # Dependencies modules
+ - `babel-plugin-module-resolver`: 절대경로 지정
