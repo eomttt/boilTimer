@@ -1,5 +1,6 @@
-import React, {useCallback} from 'react';
-import {View, Text} from 'react-native';
+import React, { useCallback } from 'react';
+import { View, Text, TouchableHighlight } from 'react-native';
+import { Layout } from 'components/Layout';
 import Styles from './styles';
 
 export const Home = () => {
@@ -8,13 +9,17 @@ export const Home = () => {
   }, []);
 
   return (
-    <View>
-      <Text style={Styles.title}>
-        물이 끓기 시작하면 시작 버튼을 눌러주세요!
-      </Text>
-      <View onTouchStart={handleClickTimer}>
-        <Text>시작</Text>
+    <Layout>
+      <View style={Styles.container}>
+        <View style={Styles.title}>
+          <Text>물이 끓기 시작하면 시작 버튼을 눌러주세요!</Text>
+        </View>
+        <View style={Styles.buttonWrapper}>
+          <TouchableHighlight onPress={handleClickTimer}>
+            <Text>시작</Text>
+          </TouchableHighlight>
+        </View>
       </View>
-    </View>
+    </Layout>
   );
 };
