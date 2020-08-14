@@ -24,6 +24,14 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
     marginBottom: 'auto',
   },
+  small: {
+    minWidth: 69,
+    height: 23,
+    borderRadius: 5,
+  },
+  smallBottomText: {
+    fontSize: 12,
+  },
 });
 
 export default styles;
