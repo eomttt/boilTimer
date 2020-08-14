@@ -1,12 +1,16 @@
-import React, { useCallback } from 'react';
-import { View, Text, TouchableHighlight, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { Layout } from 'components/Layout';
+import React, { useCallback } from 'react';
+import { Image, Text, TouchableHighlight, View } from 'react-native';
 import Styles from './styles';
+import { Router } from 'constants/route';
 
 export const Home = () => {
+  const navigation = useNavigation();
+
   const handleClickTimer = useCallback(() => {
-    console.log('Start timer');
-  }, []);
+    navigation.navigate(Router.TIMER);
+  }, [navigation]);
 
   return (
     <Layout>
