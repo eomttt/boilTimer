@@ -32,15 +32,20 @@ const styles = StyleSheet.create({
   middle: {
     flex: 1.5,
     display: 'flex',
+    marginBottom: 20,
   },
   image: {
     marginTop: 'auto',
     marginLeft: 'auto',
     marginRight: 'auto',
     marginBottom: 'auto',
+    flex: 1,
   },
   bottom: {
     flex: 1.5,
+  },
+  buttonWrapper: {
+    marginBottom: 15,
   },
 });
 

@@ -34,7 +34,9 @@ export const Home = () => {
           />
         </View>
         <View style={Styles.bottom}>
-          <Button label={'시작'} onClick={handleOpenTimer} />
+          <View style={Styles.buttonWrapper}>
+            <Button label={'시작'} onClick={handleOpenTimer} />
+          </View>
           <Button label={'삶은 정도 설정'} onClick={handleOpenBoiled} />
         </View>
       </View>

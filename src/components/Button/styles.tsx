@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
     backgroundColor: pointColor,
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginTop: 10,
     paddingLeft: 10,
     paddingRight: 10,
     display: 'flex',
