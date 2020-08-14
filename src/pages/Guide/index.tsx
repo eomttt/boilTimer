@@ -1,10 +1,10 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-export const Timer = () => {
+export const Guide = () => {
   return (
     <View>
-      <Text>Timer Page</Text>
+      <Text>Guide page</Text>
     </View>
   );
 };
