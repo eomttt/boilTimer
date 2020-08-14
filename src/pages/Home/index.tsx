@@ -1,15 +1,20 @@
 import { useNavigation } from '@react-navigation/native';
+import { Button } from 'components/Button';
 import { Layout } from 'components/Layout';
-import React, { useCallback } from 'react';
-import { Image, Text, TouchableHighlight, View } from 'react-native';
-import Styles from './styles';
 import { Router } from 'constants/route';
+import React, { useCallback } from 'react';
+import { Image, Text, View } from 'react-native';
+import Styles from './styles';
 
 export const Home = () => {
   const navigation = useNavigation();
 
-  const handleClickTimer = useCallback(() => {
+  const handleOpenTimer = useCallback(() => {
     navigation.navigate(Router.TIMER);
+  }, [navigation]);
+
+  const handleOpenBoiled = useCallback(() => {
+    navigation.navigate(Router.BOILED);
   }, [navigation]);
 
   return (
@@ -29,11 +34,8 @@ export const Home = () => {
           />
         </View>
         <View style={Styles.bottom}>
-          <TouchableHighlight onPress={handleClickTimer}>
-            <View style={Styles.button}>
-              <Text style={Styles.bottomText}>시작</Text>
-            </View>
-          </TouchableHighlight>
+          <Button label={'시작'} onClick={handleOpenTimer} />
+          <Button label={'삶은 정도 설정'} onClick={handleOpenBoiled} />
         </View>
       </View>
     </Layout>
