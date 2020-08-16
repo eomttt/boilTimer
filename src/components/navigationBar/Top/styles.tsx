@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
     marginBottom: 'auto',
     fontSize: 25,
+    fontWeight: 'bold',
     color: pointColor,
   },
 });

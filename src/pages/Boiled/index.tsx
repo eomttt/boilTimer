@@ -4,6 +4,7 @@ import { BoiledIndicate, BoiledTime, BoiledImage } from 'constants/boiled';
 import React, { useCallback, useMemo, useState } from 'react';
 import { Image, Text, View } from 'react-native';
 import Styles from './styles';
+import { ScrollView } from 'react-native-gesture-handler';
 
 export const Boiled = () => {
   const [selectedIndicator, setSelectedIndicator] = useState<BoiledIndicate>(
@@ -22,16 +23,18 @@ export const Boiled = () => {
 
   return (
     <Layout>
-      <View style={Styles.titleContainer}>
-        <Text>삶은 정도를 정해보세요!</Text>
+      <View>
+        <Text style={Styles.title}>삶은 정도를 정해보세요!</Text>
       </View>
       <View style={Styles.imageContainer}>
-        <Image source={boiledImageUrl} />
+        <Image style={Styles.image} source={boiledImageUrl} />
       </View>
-      <View style={Styles.inputContainer}>
-        <Text>{boiledTime}</Text>
+      <View>
+        <Text style={Styles.inputText}>{`${boiledTime} 분`}</Text>
       </View>
-      <BoiledIndicator onClick={handleSelectIndicator} />
+      <ScrollView style={Styles.indicatorContainer}>
+        <BoiledIndicator onClick={handleSelectIndicator} />
+      </ScrollView>
     </Layout>
   );
 };
