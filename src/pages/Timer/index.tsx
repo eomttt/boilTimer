@@ -1,9 +1,10 @@
 import { Button } from 'components/Button';
 import { Layout } from 'components/Layout';
 import { Timer as TimerComponent } from 'components/Timer';
-import React, { useState, useCallback } from 'react';
-import { View } from 'react-native';
 import { TimerStatus } from 'constants/time';
+import React, { useCallback, useState } from 'react';
+import { View } from 'react-native';
+import Styles from './styles';
 
 export const STORE_TIME = 0.1;
 
@@ -16,10 +17,10 @@ export const Timer = () => {
 
   return (
     <Layout>
-      <View>
+      <View style={Styles.timer}>
         <TimerComponent remainTime={STORE_TIME} status={timerStatus} />
       </View>
-      <View>
+      <View style={Styles.button}>
         <Button label={'시작'} onClick={startTimer} />
       </View>
     </Layout>

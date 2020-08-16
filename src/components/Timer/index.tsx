@@ -2,6 +2,7 @@ import React, { useMemo, useState, useCallback, useEffect } from 'react';
 import { getTimeFormat } from 'utils/time';
 import { TimerStatus } from 'constants/time';
 import { View, Text } from 'react-native';
+import Styles from './styles';
 
 interface TimerProps {
   remainTime: number;
@@ -63,8 +64,8 @@ export const Timer: React.FunctionComponent<TimerProps> = ({
   }, [status]);
 
   return (
-    <View>
-      <Text>{viewTime}</Text>
+    <View style={Styles.container}>
+      <Text style={Styles.text}>{viewTime}</Text>
     </View>
   );
 };
