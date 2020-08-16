@@ -11,6 +11,7 @@ module.exports = {
           constants: './src/constants',
           pages: './src/pages',
           styles: './src/styles',
+          utils: './src/utils',
         },
       },
     ],
