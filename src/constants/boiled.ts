@@ -14,6 +14,14 @@ export const BoiledTime = {
   [BoiledIndicate.HARD]: 12,
 };
 
+export const BoiledImage = {
+  [BoiledIndicate.SOFT]: 'assets/images/egg-4.png',
+  [BoiledIndicate.MIDDLE_SOFT]: 'assets/images/egg-6.png',
+  [BoiledIndicate.MIDDLE]: 'assets/images/egg-8.png',
+  [BoiledIndicate.MIDDLE_HARD]: 'assets/images/egg-10.png',
+  [BoiledIndicate.HARD]: 'assets/images/egg-12.png',
+};
+
 export const BoiledText = {
   [BoiledIndicate.SOFT]: 'Soft',
   [BoiledIndicate.MIDDLE_SOFT]: 'Middle Soft',
