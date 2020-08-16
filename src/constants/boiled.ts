@@ -15,11 +15,11 @@ export const BoiledTime = {
 };
 
 export const BoiledImage = {
-  [BoiledIndicate.SOFT]: 'assets/images/egg-4.png',
-  [BoiledIndicate.MIDDLE_SOFT]: 'assets/images/egg-6.png',
-  [BoiledIndicate.MIDDLE]: 'assets/images/egg-8.png',
-  [BoiledIndicate.MIDDLE_HARD]: 'assets/images/egg-10.png',
-  [BoiledIndicate.HARD]: 'assets/images/egg-12.png',
+  [BoiledIndicate.SOFT]: require('assets/images/egg-4.png'),
+  [BoiledIndicate.MIDDLE_SOFT]: require('assets/images/egg-6.png'),
+  [BoiledIndicate.MIDDLE]: require('assets/images/egg-8.png'),
+  [BoiledIndicate.MIDDLE_HARD]: require('assets/images/egg-10.png'),
+  [BoiledIndicate.HARD]: require('assets/images/egg-12.png'),
 };
 
 export const BoiledText = {

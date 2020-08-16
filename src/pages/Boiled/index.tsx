@@ -26,7 +26,7 @@ export const Boiled = () => {
         <Text>삶은 정도를 정해보세요!</Text>
       </View>
       <View style={Styles.imageContainer}>
-        {/* <Image source={require(boiledImageUrl)} /> */}
+        <Image source={boiledImageUrl} />
       </View>
       <View style={Styles.inputContainer}>
         <Text>{boiledTime}</Text>
