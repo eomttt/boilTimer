@@ -29,7 +29,8 @@ export default class Database {
 
   static async upsert(data: any) {
     this.deleteAll();
-    this.write(data);
+    await this.write(data);
+    return;
   }
 
   static read() {

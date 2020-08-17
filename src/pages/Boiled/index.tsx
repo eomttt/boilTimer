@@ -20,9 +20,6 @@ export const Boiled = () => {
 
   const handleSelectIndicator = useCallback((indicator: BoiledIndicate) => {
     BoiledDatabase.upsertIndicator(indicator);
-    // BoiledDatabase.getIndicator();
-    // BoiledDatabase.deleteAllIndicator();
-    // BoiledDatabase.getIndicator();
     setSelectedIndicator(indicator);
   }, []);
 

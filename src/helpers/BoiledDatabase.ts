@@ -17,11 +17,8 @@ export default class BoiledDatabase extends Database {
     await this.upsert({ boiledIndicator });
     return;
   }
+
   static getIndicator() {
     return this.read();
-  }
-
-  static deleteAllIndicator() {
-    this.deleteAll();
   }
 }
