@@ -5,6 +5,7 @@ import React, { useCallback, useMemo, useState } from 'react';
 import { Image, Text, View } from 'react-native';
 import Styles from './styles';
 import { ScrollView } from 'react-native-gesture-handler';
+import BoiledDatabase from 'helpers/BoiledDatabase';
 
 export const Boiled = () => {
   const [selectedIndicator, setSelectedIndicator] = useState<BoiledIndicate>(
@@ -18,6 +19,10 @@ export const Boiled = () => {
   ]);
 
   const handleSelectIndicator = useCallback((indicator: BoiledIndicate) => {
+    BoiledDatabase.saveIndicator(indicator);
+    BoiledDatabase.getIndicator();
+    BoiledDatabase.deleteAllIndicator();
+    BoiledDatabase.getIndicator();
     setSelectedIndicator(indicator);
   }, []);
 
