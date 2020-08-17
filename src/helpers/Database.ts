@@ -15,7 +15,7 @@ export default class Database {
       try {
         realm.write(() => {
           realm.create(this.Schema.name, data, true);
-          console.log('Realm db file path:', realm.path);
+          console.log('Realm db write file path:', realm.path);
           resolve();
         });
       } catch (error) {
@@ -25,6 +25,11 @@ export default class Database {
         realm.close();
       }
     });
+  }
+
+  static async upsert(data: any) {
+    this.deleteAll();
+    this.write(data);
   }
 
   static read() {

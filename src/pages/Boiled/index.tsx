@@ -19,10 +19,10 @@ export const Boiled = () => {
   ]);
 
   const handleSelectIndicator = useCallback((indicator: BoiledIndicate) => {
-    BoiledDatabase.saveIndicator(indicator);
-    BoiledDatabase.getIndicator();
-    BoiledDatabase.deleteAllIndicator();
-    BoiledDatabase.getIndicator();
+    BoiledDatabase.upsertIndicator(indicator);
+    // BoiledDatabase.getIndicator();
+    // BoiledDatabase.deleteAllIndicator();
+    // BoiledDatabase.getIndicator();
     setSelectedIndicator(indicator);
   }, []);
 

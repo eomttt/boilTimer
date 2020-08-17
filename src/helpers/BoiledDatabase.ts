@@ -13,6 +13,10 @@ export default class BoiledDatabase extends Database {
     return;
   }
 
+  static async upsertIndicator(boiledIndicator: string) {
+    await this.upsert({ boiledIndicator });
+    return;
+  }
   static getIndicator() {
     return this.read();
   }
