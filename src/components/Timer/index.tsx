@@ -18,6 +18,7 @@ export const Timer: React.FunctionComponent<TimerProps> = ({
 }) => {
   const setTime = useMemo(() => remainTime * 60, [remainTime]);
   const [nowTime, setNowTime] = useState(setTime);
+  const [spendTime, setSpendTime] = useState(0);
   const viewTime = useMemo(() => {
     const min = getTimeFormat(nowTime / 60);
     const sec = getTimeFormat(nowTime % 60);
@@ -34,21 +35,22 @@ export const Timer: React.FunctionComponent<TimerProps> = ({
 
   const startTimer = useCallback(() => {
     if (!timer) {
-      let spendInterval = 0;
-      timer = setInterval(intervalTime, TIME_INTERVAL);
-
-      function intervalTime() {
-        spendInterval += 1;
-        setNowTime(setTime - spendInterval);
-        if (spendInterval >= setTime) {
-          clearTimer();
-        }
-      }
+      timer = setInterval(() => {
+        setSpendTime((time) => time + 1);
+      }, TIME_INTERVAL);
       return;
     }
 
     alert('타이머가 진행 중입니다.');
-  }, [setTime, clearTimer]);
+  }, []);
+
+  useEffect(() => {
+    setNowTime(setTime - spendTime);
+    if (spendTime >= setTime) {
+      clearTimer();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [spendTime]);
 
   useEffect(() => {
     return () => {
