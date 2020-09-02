@@ -9,5 +9,3 @@ comment:
   behavior: default
 codecov:
   max_report_age: off
-fixes:
-  - "::coverage/"         # move root   e.g., "path/" => "after/path/"

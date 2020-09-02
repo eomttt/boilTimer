@@ -34,4 +34,4 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
-          file: ./codecov.yml #optional
+          yml: ./codecov.yml #optional
