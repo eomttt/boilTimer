@@ -10,4 +10,4 @@ comment:
 codecov:
   max_report_age: off
 fixes:
-  - "::__test__/"         # move root   e.g., "path/" => "after/path/"
+  - "::coverage/"         # move root   e.g., "path/" => "after/path/"
