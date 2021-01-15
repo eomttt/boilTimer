@@ -1,11 +1,11 @@
 import { BoiledIndicator } from 'components/BoiledIndicator';
 import { Layout } from 'components/Layout';
-import { BoiledIndicate, BoiledTime, BoiledImage } from 'constants/boiled';
+import { BoiledImage, BoiledIndicate, BoiledTime } from 'constants/boiled';
+import { BoiledDatabase } from 'helpers/BoiledDatabase';
 import React, { useCallback, useMemo, useState } from 'react';
 import { Image, Text, View } from 'react-native';
-import Styles from './styles';
 import { ScrollView } from 'react-native-gesture-handler';
-import BoiledDatabase from 'helpers/BoiledDatabase';
+import Styles from './styles';
 
 export const Boiled = () => {
   const [selectedIndicator, setSelectedIndicator] = useState<BoiledIndicate>(
@@ -19,7 +19,7 @@ export const Boiled = () => {
   ]);
 
   const handleSelectIndicator = useCallback((indicator: BoiledIndicate) => {
-    BoiledDatabase.upsertIndicator(indicator);
+    BoiledDatabase.setIndicator(indicator);
     setSelectedIndicator(indicator);
   }, []);
 

@@ -30,4 +30,4 @@ $ brew install watchman
  - [react-native-debugger-open](https://github.com/jhen0409/react-native-debugger): 디버깅 모드 할 때 크롬이 먼저 열리는데 이를 방지하고 react-native-debugger가 열리도록 바꾸는 툴
  - [react-navigation](https://reactnavigation.org/docs/getting-started): route 이동
  - [@react-navigation/stack](https://reactnavigation.org/docs/stack-navigator/): web 처럼 router stack 제공
- - [realm](https://realm.io/docs/javascript/6.0.0/): 로컬 데이터베이스
+ - [@react-native-async-storage/async-storage](https://github.com/react-native-async-storage/async-storage): Local storage

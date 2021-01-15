@@ -1,12 +1,12 @@
 import { Button } from 'components/Button';
 import { Layout } from 'components/Layout';
 import { Timer as TimerComponent } from 'components/Timer';
+import { BoiledIndicate, BoiledTime } from 'constants/boiled';
 import { TimerStatus } from 'constants/time';
-import React, { useCallback, useState, useEffect } from 'react';
+import { BoiledDatabase } from 'helpers/BoiledDatabase';
+import React, { useCallback, useEffect, useState } from 'react';
 import { View } from 'react-native';
 import Styles from './styles';
-import BoiledDatabase from 'helpers/BoiledDatabase';
-import { BoiledTime, BoiledIndicate } from 'constants/boiled';
 
 export const Timer = () => {
   const [storedTime, setStoredTime] = useState(0);
@@ -17,11 +17,12 @@ export const Timer = () => {
   }, []);
 
   useEffect(() => {
-    const savedIndicator = BoiledDatabase.getIndicator();
-    if (savedIndicator.length > 0) {
-      // TODO: get BoiledIndicate from savedIndicator
-      setStoredTime(BoiledTime[BoiledIndicate.SOFT]);
-    }
+    (async () => {
+      const savedIndicator = await BoiledDatabase.getIndicator();
+      setStoredTime(
+        BoiledTime[savedIndicator ? savedIndicator : BoiledIndicate.SOFT],
+      );
+    })();
   }, []);
 
   return (

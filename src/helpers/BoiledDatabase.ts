@@ -1,24 +1,13 @@
-import Database from 'helpers/Database';
+import { BoiledIndicate } from 'constants/boiled';
+import { Storage } from 'helpers/Storage';
 
-export default class BoiledDatabase extends Database {
-  static Schema = {
-    name: 'Boiled',
-    properties: {
-      boiledIndicator: 'string',
-    },
-  };
-
-  static async saveIndicator(boiledIndicator: string) {
-    await this.write({ boiledIndicator });
+export class BoiledDatabase extends Storage {
+  static async setIndicator(indicator: BoiledIndicate) {
+    await this.setItem(Storage.Key.TIME, indicator);
     return;
   }
 
-  static async upsertIndicator(boiledIndicator: string) {
-    await this.upsert({ boiledIndicator });
-    return;
-  }
-
-  static getIndicator() {
-    return this.read();
+  static async getIndicator() {
+    return await this.getItem<BoiledIndicate>(Storage.Key.TIME);
   }
 }
